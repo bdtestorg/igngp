@@ -30,10 +30,6 @@ var baseLayers = {
       wmtsurl + '&layer=ORTHOIMAGERY.ORTHOPHOTOS&format=image/jpeg&style=normal',
       {"format":"image/jpeg","minZoom":0,"maxZoom":20,"detectRetina":detectRetina,"attribution":attrIGN}
   ),
-  "Ortho-images HR" : new L.tileLayer.wms(wmsurl,
-      {"version":"1.3.0","layers":"HR.ORTHOIMAGERY.ORTHOPHOTOS","format":"image/png","transparent":true,"detectRetina":detectRetina,
-       "attribution":attrIGN}
-  ),
   "Ortho-express" : new L.TileLayer(
       wmtsurl + '&layer=ORTHOIMAGERY.ORTHOPHOTOS.ORTHO-EXPRESS&format=image/jpeg&style=normal',
       {"format":"image/jpeg","minZoom":0,"maxZoom":19,"detectRetina":detectRetina,"attribution":attrIGN}
