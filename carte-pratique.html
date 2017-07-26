@@ -22,6 +22,9 @@ var map = L.map('map').setView([48, 3], 8); // view pour la zone
 L.control.scale({position:'bottomleft', metric:true, imperial:false}).addTo(map);
 var c = new L.Control.Coordinates();
 c.addTo(map);
+map.on('click', function(e) {
+	c.setCoordinates(e);
+});
 
 var wmtsurl = 'https://wxs.ign.fr/pratique/geoportail/wmts?'
             + 'service=WMTS&version=1.0.0&request=GetTile&tilematrixSet=PM&height=256&width=256&'
