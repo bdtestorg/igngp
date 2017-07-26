@@ -38,9 +38,13 @@ var baseLayers = {
 map.addLayer(baseLayers["Cartes IGN"]);
 
 var overlays = {
-  "Ortho-images HR" : new L.tileLayer.wms('http://ws.carmencarto.fr/WMS/119/fxx_inpn?',
-      {"version":"1.3.0","layers":"Reserves_naturelles_nationales","format":"image/png","transparent":true,"detectRetina":detectRetina,
-       "attribution":attrIGN}
+  "Réserves naturelles nationales" : new L.tileLayer.wms('http://ws.carmencarto.fr/WMS/119/fxx_inpn?',
+  {"version":"1.3.0","layers":"Reserves_naturelles_nationales","format":"image/png","transparent":true,
+    "detectRetina":detectRetina, "attribution":attrINPN}
+  ),
+  "Parcs nationaux" : new L.tileLayer.wms('http://ws.carmencarto.fr/WMS/119/fxx_inpn?',
+  { "version":"1.3.0","layers":"Parcs_nationaux","format":"image/png","transparent":true,
+    "detectRetina":detectRetina, "attribution":attrINPN }
   ),
 };
 
@@ -50,3 +54,27 @@ L.control.layers(baseLayers, overlays).addTo(map);
       </script>
     </body>
 </html>
+
+
+        Terrains des Conservatoires des espaces naturels (Terrains_des_Conservatoires_des_espaces_naturels)
+        Les Conservatoires d'espaces naturels contribuent à mieux connaître, préserver, gérer et valoriser le patrimoine naturel et paysager notamment par la maîtrise foncière.
+        Terrains du Conservatoire du Littoral (Terrains_du_Conservatoire_du_Littoral)
+        Les sites du conservatoire du littoral ont pour vocation la sauvegarde des espaces côtiers et lacustres.
+        Parcs naturels marins (Parc_naturel_marin)
+        Les parcs naturels marins ont pour but, à l'instar des parcs naturels régionaux, de concilier la protection et le développement durable de vastes espaces maritimes dont le patrimoine naturel est remarquable.
+        Parcs naturels régionaux (Parcs_naturels_regionaux)
+        Les parcs naturels régionaux ont pour but de valoriser de vastes espaces de fort intérêt culturel et naturel, et de veiller au développement durable de ces territoires dont le caractère rural est souvent très affirmé.
+        Réserves nationales de chasse et faune sauvage (Reserves_nationales_de_chasse_et_faune_sauvage)
+        Les réserves nationales de chasse et de faune sauvage sont des espaces protégés terrestres ou marins dont la gestion est principalement assurée par l'Office National de la Chasse et de la Faune Sauvage. Celui-ci veille au maintien d'activités cynégétiques durables et à la définition d'un réseau suffisant d'espaces non chassés susceptibles d'accueillir notamment l'avifaune migratrice.
+         ()
+        Les parcs nationaux sont de vastes espaces protégés terrestres ou marins dont le patrimoine naturel est exceptionnel, et dont le but est à la fois de protéger des processus écologiques à large échelle et de fournir des possibilités de découverte de la nature. Les parcs nationaux français sont classiquement composés de deux zones : une aire d'adhésion et le coeur de parc. Les coeurs de parcs font partie des espaces protégés relevant prioritairement de la Stratégie de Création d'Aires Protégées mise en place actuellement. Ils correspondent généralement à la catégorie UICN II , alors que les aires d'adhésion se classent en catégorie UICN V. Les aires maritimes adjacentes sont l'équivalent marin des aires d'adhésion, et se classent donc également en catégorie V. Des réserves intégrales de parcs sont parfois définies au sein des coeurs de parcs, elles peuvent relever de la catégorie Ia de l'UICN.
+        Réserves Intégrales de Parcs Nationaux (Reserves_Integrales_de_Parcs_Nationaux)
+        Au sein d'un coeur de parc national, il peut être institué une « réserve intégrale » afin d'assurer, dans un but scientifique, une protection plus grande de certains éléments de la faune et de la flore.
+        Reserves naturelles de Corse (Reserves_naturelles_Corse)
+        Les réserves naturelles sont des espaces protégés terrestres ou marins dont le patrimoine naturel est exceptionnel, tant sur le plan de la biodiversité que parfois sur celui de la géodiversité.
+        Réserves naturelles régionales (Reserves_naturelles_regionales)
+        Les réserves naturelles sont des espaces protégés terrestres ou marins dont le patrimoine naturel est exceptionnel, tant sur le plan de la biodiversité que parfois sur celui de la géodiversité.
+        Arrêtés de protection de biotope (Arretes_de_protection_de_biotope)
+        Un arrêté de protection de biotope a pour vocation la conservation de l'habitat d'espèces protégées.
+        Réserves biologiques (Reserves_biologiques)
+        Une réserve biologique est un espace protégé en milieu forestier ou en milieu associé à la forêt (landes, mares, tourbières, dunes). Ce statut s'applique aux forêts gérées par l'Office National des Forêts et a pour but la protection d'habitats remarquables ou représentatifs. Les réserves biologiques font partie des espaces relevant prioritairement de la Stratégie de Création d'Aires Protégées mise en place actuellement. Selon les habitats et les orientations de gestion, on distingue les réserves biologiques dirigées, où est mise en place une gestion conservatoire (relevant de la catégorie IV de l'UICN) et les réserves biologiques intégrales où la forêt est laissée en libre évolution (pouvant relever de la catégorie Ia de l'UICN). 
