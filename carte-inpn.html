@@ -41,6 +41,11 @@ var baseLayers = {
   "Ortho-images" : new L.TileLayer(
       wmtsurl + '&layer=ORTHOIMAGERY.ORTHOPHOTOS&format=image/jpeg&style=normal',
       {"format":"image/jpeg","minZoom":0,"maxZoom":20,"detectRetina":detectRetina,"attribution":attrIGN}
+  ),
+  "OSM" : new L.TileLayer(
+      'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+      { "format":"image/jpeg","minZoom":0,"maxZoom":20,"detectRetina":detectRetina,
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}
   )
 };
 
