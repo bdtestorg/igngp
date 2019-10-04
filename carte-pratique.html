@@ -22,7 +22,7 @@ var wmtsurl = 'https://wxs.ign.fr/pratique/geoportail/wmts?'
 var attrIGN = "&copy; <a href='http://www.ign.fr'>IGN</a>";
 
 var baseLayers = {
-  "Maps" : new L.TileLayer(
+  "Cartes" : new L.TileLayer(
       wmtsurl + '&layer=GEOGRAPHICALGRIDSYSTEMS.MAPS&format=image/jpeg&style=normal',
       {"format":"image/jpeg","minZoom":0,"maxZoom":18,"attribution":attrIGN}
   ),
